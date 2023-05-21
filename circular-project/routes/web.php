@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\DefinitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,6 @@ use App\Http\Controllers\HomepageController;
 */
 
 Route::get('/', [HomepageController::class, 'show']);
+
+Route::get('/what', [DefinitionController::class, 'show']);
 

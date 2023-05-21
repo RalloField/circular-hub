@@ -3,8 +3,8 @@
 @section('content')
     <x-success />
 
-    <div>
-        <p>Welcome to Circular Hub</p>
+    <div class="banner">
+        <h1>Circular Hub</h1>
         <p>Add your circular projects and get connecting in the Circular Community!</p>
     </div>
 @endsection
