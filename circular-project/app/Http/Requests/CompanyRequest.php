@@ -9,10 +9,10 @@ class CompanyRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
-    {
-        return false;
-    }
+    // public function authorize(): bool
+    // {
+    //     return false;
+    // }
 
     /**
      * Get the validation rules that apply to the request.
@@ -22,7 +22,10 @@ class CompanyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => ['max:255'],
+            'address' => ['max:255'],
+            'country' => ['max:255'],
+            'type' => ['max:255']
         ];
     }
 }

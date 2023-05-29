@@ -9,10 +9,10 @@ class UserRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
-    {
-        return false;
-    }
+    // public function authorize(): bool
+    // {
+    //     return false;
+    // }
 
     /**
      * Get the validation rules that apply to the request.
@@ -22,7 +22,11 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'firstname' => ['required', 'min:1', 'max:255'],
+            'lastname' => ['required', 'min:1', 'max:255'],
+            'username' => ['required', 'min:5', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'min:8', 'max:255', 'confirmed']
         ];
     }
 }

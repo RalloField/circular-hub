@@ -22,7 +22,9 @@ class ProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => ['max:255'],
+            'company' => ['max:255'],
+            'short_description' => ['max:255']
         ];
     }
 }
