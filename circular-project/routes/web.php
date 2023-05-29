@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DefinitionController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/circular', function () {
         'circular' => '<h1>Circular</h1>'
     ]);
 });
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');

@@ -3,7 +3,7 @@
         <div class="logo"><a href="{{ route('home') }}">Circular Hub </a></div>
         <ul class="links">
             <li><a href="{{ route('what') }}">What?</a></li>
-            <li><a href="Projects">Projects</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li><a href="Companies">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
         </ul>
@@ -14,7 +14,7 @@
         </div>
         <div class="dropdown_menu">
             <li><a href="What">What?</a></li>
-            <li><a href="Projects">Projects</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li><a href="Companies">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
             <li><a href="#" class="action_btn">Register</a></li>
