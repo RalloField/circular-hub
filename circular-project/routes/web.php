@@ -15,7 +15,12 @@ use App\Http\Controllers\DefinitionController;
 |
 */
 
-Route::get('/', [HomepageController::class, 'show']);
+Route::get('/', [HomepageController::class, 'show'])->name('home');
 
-Route::get('/what', [DefinitionController::class, 'show']);
+Route::get('/what', [DefinitionController::class, 'show'])->name('what');
 
+Route::get('/circular', function () {
+    return view('circularwhat.show', [
+        'circular' => '<h1>Circular</h1>'
+    ]);
+});

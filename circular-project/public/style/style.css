@@ -6,11 +6,30 @@
 }
 
 body{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     color: beige;
     background-image: url('../images/assets/unsplash_tree.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.articles{
+    max-width: 600px;
+    margin: auto;
+    background-color: rgb(57, 87, 26);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.articles + .articles {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.circular-def h1{
+    font-size: large;
 }
 
 li a {
@@ -139,9 +158,14 @@ scale:0.95;
 }
 
 .banner{ 
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    height: 80vh;
+}
+
+.banner-content{
+    text-align: center;
 }
 
 .banner h1 {
@@ -165,5 +189,16 @@ scale:0.95;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.footer {
+  background-color: rgb(239, 144, 19);
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
 
+.footer p {
+  font-size: 14px;
+  color: beige;
+  margin: 0;
+}
 
