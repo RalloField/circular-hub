@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('company');
             $table->string('short_description');
+            $table->timestamps();
             $table->timestamp('project_added_at')->nullable();
             $table->integer('company_id');
+            $table->integer('user_id');
         });
     }
 

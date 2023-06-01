@@ -13,7 +13,7 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="dropdown_menu">
-            <li><a href="What">What?</a></li>
+            <li><a href="{{ route('what') }}">What?</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="Companies">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
