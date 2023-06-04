@@ -202,3 +202,188 @@ scale:0.95;
   margin: 0;
 }
 
+/* Form Style for the projects */
+
+  .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: beige;
+    }
+
+    .project-form-container {
+        max-width: 400px;
+        padding: 2rem;
+        background-color: rgb(57, 87, 26);
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: beige;
+    }
+
+    .project-form {
+        margin-bottom: 1rem;
+    }
+
+    .form-name,
+    .form-company,
+    .form-short_description {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: beige;
+    }
+
+    .input-name,
+    .input-company,
+    .input-description {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #cccccc;
+        color: black;
+        border-radius: 0.25rem;
+    }
+
+    .text-red-500 {
+        color: #f44336;
+    }
+
+    .text-xs {
+        font-size: 0.75rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .bg-orange-200 {
+        background-color: #ffcc80;
+    }
+
+    .text-gray-900 {
+        color: #212121;
+    }
+
+    .rounded {
+        border-radius: 0.25rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .p-1 {
+        padding: 0.25rem;
+    }
+
+    .hover:bg-orange-300:hover {
+        background-color: #ffe0b2;
+    }
+
+    /* Styling for table of projects */
+
+    .projects-table-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        color: beige;
+        margin-bottom: 2rem;
+    }
+
+    .table-container {
+        max-width: 800px;
+        width: 100%;
+        padding: 2rem;
+        background-color:rgb(57, 87, 26);
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+
+    .font-bold {
+        font-weight: 700;
+    }
+
+    .mb-5 {
+        margin-bottom: 1.25rem;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .pb-5 {
+        padding-bottom: 1.25rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .bg-white {
+        background-color: #ffffff;
+    }
+
+    .text-gray-900 {
+        color: #212121;
+    }
+
+    .rounded {
+        border-radius: 0.25rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .p-1 {
+        padding: 0.25rem;
+    }
+
+    .overflow-x-auto {
+        overflow-x: auto;
+    }
+
+    .projects-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .header-table-name,
+    .header-table-company,
+    .header-table-description {
+        padding: 0.75rem 1.5rem;
+        text-align: left;
+        font-weight: bold;
+        color: beige;
+        border-bottom: 2px solid #cccccc;
+    }
+
+    .table-project-name,
+    .table-project-company,
+    .table-project-description {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #cccccc;
+        color: beige;
+    }
+
+    .table-project-name a,
+    .table-project-company a {
+        color: beige;
+        text-decoration: none;
+    }
+
+    .table-project-description p {
+        margin: 0;
+    }

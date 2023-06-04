@@ -1,32 +1,31 @@
 @extends ('components.layout')
 
 @section('content')
-    <div class="bg-gray-900 opacity-95 text-purple-900">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold mb-5 p-2 text-center text-white">Add a new project</h1>
-            <div class="m-6 max-w-lg mx-auto p-2 rounded-xl">
+    <div class="project-container">
+        <div class="project-form-container">
+            <h1 class="project-header">Add a new project</h1>
+            <div class="project-form">
                 <form method="POST" action="{{ route('create-project') }}">
                     @csrf
 
-                    <label for="name" class="block mb-2 uppercase font-bold text-xs text-orange-200">Project Name:
+                    <label for="name" class="form-name">Project Name:
                     </label>
-                    <input type="text" id="name" name="name" value="{{ old('name') }}"
-                        class="border border-orange-200 p-2 w-full" required>
+                    <input type="text" id="name" name="name" value="{{ old('name') }}" class="input-name"
+                        required>
                     @error('name')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
 
-                    <label for="company" class="block mb-2 uppercase font-bold text-xs text-orange-200">Company: </label>
-                    <input type="text" id="company" name="company" value="{{ old('company') }}"
-                        class="border border-orange-200 p-2 w-full" required>
+                    <label for="company" class="form-company">Company: </label>
+                    <input type="text" id="company" name="company" value="{{ old('company') }}" class="input-company"
+                        required>
                     @error('company')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
 
-                    <label for="short_description"
-                        class="block mb-2 uppercase font-bold text-xs text-orange-200">Description: </label>
+                    <label for="short_description" class="form-short_description">Description: </label>
                     <input type="text" id="short_description" name="short_description"
-                        value="{{ old('short_description') }}" class="border border-orange-200 p-2 w-full" required>
+                        value="{{ old('short_description') }}" class="input-description" required>
                     @error('short_description')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
