@@ -21,7 +21,7 @@
 
 - This project is still a Work In Progress 
 
-[<img src="../../app/public/assets/images/assets/home.png">]
+[<img src="public/images/assets/home.png">]
 
 This webapp will allow guests to browse through projects and companies to consult about what they do for circular economy. It is after registering they can add their company and project to connect with other users. Only admins will have the authorisation to delete projects or update projects (unless ofcourse it is the users own project).
 
