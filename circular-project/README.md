@@ -21,12 +21,12 @@
 
 - This project is still a Work In Progress 
 
-[<img src="assets/home.png">]
+[<img src="app/public/assets/images/assets/home.png">]
 
 This webapp will allow guests to browse through projects and companies to consult about what they do for circular economy. It is after registering they can add their company and project to connect with other users. Only admins will have the authorisation to delete projects or update projects (unless ofcourse it is the users own project).
 
 
-[<img src="assets/overview.png">]
+[<img src="app/public/assets/images/assets/overview.png">]
 
 
 ## Prerequisites
@@ -76,9 +76,9 @@ In the project folder, make sure you add a .gitignore file, and add the followin
 
 
 
-[<img src="assets/table.png">]
-[<img src="assets/create.png">]
-[<img src="assets/menu.png">]
+[<img src="app/public/assets/images/assets/table.png">]
+[<img src="app/public/assets/images/assets/create.png">]
+[<img src="app/public/assets/images/assets/menu.png">]
 
 
 
