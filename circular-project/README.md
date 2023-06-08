@@ -1,4 +1,4 @@
-# Welcome to my the Cyclist_API
+# Welcome to the Circular Hub README
 
 ## Table of Contents
 * [Introduction](#introduction)
