@@ -31,3 +31,5 @@ Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 Route::get('/create-projects', [ProjectController::class, 'create'])->name('project-form');
 
 Route::post('/create-project', [ProjectController::class, 'store'])->name('create-project');
+
+Route::delete('/delete-project/{id}', [ProjectController::class, 'delete'])->name('delete-project');

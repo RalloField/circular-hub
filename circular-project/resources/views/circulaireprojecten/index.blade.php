@@ -16,6 +16,7 @@
                             <th class="header-table-name">Name</th>
                             <th class="header-table-company">Company</th>
                             <th class="header-table-description">Description</th>
+                            <th class="header-buttons"> Edit/Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,18 @@
                                 <td class="table-project-description">
                                     <p>{{ $project->short_description }}
                                 </td>
+                                <td>
+                                    <form action="{{ route('delete-project', ['id' => $project->id]) }}" method="POST"
+                                        style="display: inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
+                                            class="bg-white text-gray-900 rounded mt-2 p-1">Delete</button>
+                                    </form>
+                                    {{-- <a href="{{ route('edit-project', ['id' => $project->id]) }}"
+                                        class="bg-white text-gray-900 rounded mt-2 p-1">Edit</a> --}}
+                                </td>
+
                             </tr>
                         @endforeach
 
