@@ -4,7 +4,7 @@
         <ul class="links">
             <li><a href="{{ route('what') }}">What?</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="Companies">Companies</a></li>
+            <li><a href="{{ route('companies') }}">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
         </ul>
         <a href="#" class="action_btn">Register</a>

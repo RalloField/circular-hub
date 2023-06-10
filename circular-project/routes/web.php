@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DefinitionController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::get('/create-projects', [ProjectController::class, 'create'])->name('proj
 Route::post('/create-project', [ProjectController::class, 'store'])->name('create-project');
 
 Route::delete('/delete-project/{id}', [ProjectController::class, 'delete'])->name('delete-project');
+
+Route::get('/companies', [CompanyController::class, 'index'])->name('companies');
