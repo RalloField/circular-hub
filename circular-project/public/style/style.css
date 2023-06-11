@@ -362,7 +362,10 @@ scale:0.95;
 
     .header-table-name,
     .header-table-company,
-    .header-table-description {
+    .header-table-description,
+    .header-table-type,
+    .header-table-address,
+    .header-table-country {
         padding: 0.75rem 1.5rem;
         text-align: left;
         font-weight: bold;
@@ -387,3 +390,39 @@ scale:0.95;
     .table-project-description p {
         margin: 0;
     }
+
+    /* Styling for Companies table */
+    .companies-table-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        color: beige;
+        margin-bottom: 2rem;
+    }  
+    
+    .table-companies-name,
+    .table-companies-type,
+    .table-companies-address,
+    .table-companies-country
+    {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #cccccc;
+        color: beige;
+    }
+
+    .table-companies-name a,
+    .table-companies-type a,
+    .table-companies-address a,
+    .table-companies-country a {
+        color: beige;
+        text-decoration: none;
+    }
+
+    .table-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    
