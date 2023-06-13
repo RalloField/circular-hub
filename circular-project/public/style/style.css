@@ -202,6 +202,57 @@ scale:0.95;
   margin: 0;
 }
 
+/* Form Style for the register */
+
+.register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: beige;
+    }
+
+    .register-form-container {
+        max-width: 400px;
+        padding: 2rem;
+        background-color: rgb(57, 87, 26);
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: beige;
+    }
+
+    .register-form {
+        margin-bottom: 1rem;
+    }
+
+    .form-name,
+    .form-lastname,
+    .form-email,
+    .form-password {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: beige;
+    }
+
+    .input-name,
+    .input-lastname,
+    .input-email,
+    .input-password {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #cccccc;
+        color: black;
+        border-radius: 0.25rem;
+    }
+
 /* Form Style for the projects */
 
   .project-container {

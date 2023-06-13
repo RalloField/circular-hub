@@ -7,7 +7,7 @@
             <li><a href="{{ route('companies') }}">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
         </ul>
-        <a href="#" class="action_btn">Register</a>
+        <a href="{{ route('register') }}" class="action_btn">Register</a>
         <a href="#" class="action_btn">Sign In</a>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
@@ -15,9 +15,9 @@
         <div class="dropdown_menu">
             <li><a href="{{ route('what') }}">What?</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="Companies">Companies</a></li>
+            <li><a href="{{ route('companies') }}">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
-            <li><a href="#" class="action_btn">Register</a></li>
+            <li><a href="{{ route('register') }}" class="action_btn">Register</a></li>
             <li><a href="#" class="action_btn">Sign In</a></li>
         </div>
 </header>

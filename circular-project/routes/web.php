@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DefinitionController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::post('/create-project', [ProjectController::class, 'store'])->name('creat
 Route::delete('/delete-project/{id}', [ProjectController::class, 'delete'])->name('delete-project');
 
 Route::get('/companies', [CompanyController::class, 'index'])->name('companies');
+
+Route::get('/register', [UserController::class, 'create'])->name('register');
