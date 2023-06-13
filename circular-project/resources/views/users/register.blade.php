@@ -5,7 +5,7 @@
         <div class="register-form-container">
             <h1 class="register-header">Register</h1>
             <div class="register-form">
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('create-user') }}">
                     @csrf
 
                     <label for="name" class="form-name">Name:
@@ -31,7 +31,7 @@
                     @enderror
 
                     <label for="password" class="form-password">Password: </label>
-                    <input type="text" id="password" name="password" value="{{ old('password') }}"
+                    <input type="password" id="password" name="password" value="{{ old('password') }}"
                         class="input-password" required>
                     @error('password')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
