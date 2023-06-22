@@ -22,11 +22,11 @@ Route::get('/', [HomepageController::class, 'show'])->name('home');
 
 Route::get('/what', [DefinitionController::class, 'show'])->name('what');
 
-Route::get('/circular', function () {
-    return view('circularwhat.show', [
-        'circular' => '<h1>Circular</h1>'
-    ]);
-});
+Route::get('/circular-economy', [DefinitionController::class, 'circulareconomy'])->name('definition');
+
+Route::get('/circular-tech', [DefinitionController::class, 'circulartech'])->name('techworld');
+
+Route::get('/circular-help', [DefinitionController::class, 'circularhelp'])->name('helpout');
 
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
