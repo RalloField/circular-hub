@@ -34,6 +34,6 @@ class UserController extends Controller
 
         $user->save();
         Auth::login($user);
-        return to_route('home');
+        return view('circularcompanies.create');
     }
 }

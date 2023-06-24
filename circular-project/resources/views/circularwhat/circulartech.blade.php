@@ -13,6 +13,10 @@
                     challenge to find a way to tackle this issue with a new way of recycling their products to be able to
                     re-use these precious materials in their new high-end technologies. But will they succeed?</p>
             </div>
+
         </article>
+        <div class="button-container">
+            <a href="{{ route('what') }}" class="Backbutton" type="button">Go Back</a>
+        </div>
     </div>
 @endsection

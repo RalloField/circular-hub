@@ -17,5 +17,8 @@
                 <!-- Additional detailed content -->
             </div>
         </article>
+        <div class="button-container">
+            <a href="{{ route('what') }}" class="Backbutton" type="button">Go Back</a>
+        </div>
     </div>
 @endsection

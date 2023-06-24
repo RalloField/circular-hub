@@ -11,5 +11,8 @@
                 <p>Find out how you can already have an impact in your own household or even on the workfloor!</p>
             </div>
         </article>
+        <div class="button-container">
+            <a href="{{ route('what') }}" class="Backbutton" type="button">Go Back</a>
+        </div>
     </div>
 @endsection
