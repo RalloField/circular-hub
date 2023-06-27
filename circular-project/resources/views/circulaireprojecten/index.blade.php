@@ -7,8 +7,10 @@
     <div class="projects-table-container">
         <div class="table-container">
             <h1 class="text-3xl font-bold mb-5 p-2 pb-5 text-center">Projects</h1>
-            <a href="{{ route('project-form') }}" class="bg-white text-gray-900 rounded mt-2 p-1">Add a
-                project</a>
+            @auth
+                <a href="{{ route('project-form') }}" class="bg-white text-gray-900 rounded mt-2 p-1">Add a
+                    project</a>
+            @endauth
             <div class="overflow-x-auto">
                 <table class="projects-table">
                     <thead>

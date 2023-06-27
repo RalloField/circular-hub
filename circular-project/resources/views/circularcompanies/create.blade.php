@@ -5,7 +5,7 @@
         <div class="company-form-container">
             <h1 class="company-header">Register your company:</h1>
             <div class="company-form">
-                <form method="POST" action="{{ route('create-project') }}">
+                <form method="POST" action="{{ route('register-company') }}">
                     @csrf
 
                     <label for="name" class="form-name">Company name:

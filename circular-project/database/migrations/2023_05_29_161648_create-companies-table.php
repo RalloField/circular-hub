@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('country');
             $table->string('type');
             $table->timestamp('company_added_at')->nullable();
+            $table->timestamps();
         });
     }
 

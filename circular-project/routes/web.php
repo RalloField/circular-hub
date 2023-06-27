@@ -38,6 +38,10 @@ Route::delete('/delete-project/{id}', [ProjectController::class, 'delete'])->nam
 
 Route::get('/companies', [CompanyController::class, 'index'])->name('companies');
 
+Route::get('/register-company', [CompanyController::class, 'create'])->name('register-company');
+
+Route::post('/register-company', [CompanyController::class, 'store'])->name('register-company');
+
 Route::get('/register', [UserController::class, 'create'])->name('register');
 
 Route::post('/register', [UserController::class, 'store'])->name('create-user');

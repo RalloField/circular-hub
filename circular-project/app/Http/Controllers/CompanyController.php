@@ -37,7 +37,7 @@ class CompanyController extends Controller
 
         $company->save();
 
-        return redirect('projects');
+        return redirect('companies');
     }
 
     public function delete($id)
