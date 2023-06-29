@@ -10,6 +10,11 @@ class Project extends Model
 {
     use HasFactory;
 
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
     protected $fillable = [
         'name',
         'company',

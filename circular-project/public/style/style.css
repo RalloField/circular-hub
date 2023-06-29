@@ -614,6 +614,25 @@ scale:0.95;
         margin: 0;
     }
 
+    /* Example CSS styles */
+.add-project-btn {
+    background-color:rgb(239, 144, 19);
+    color: beige;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+
     /* Styling for Companies table */
     .companies-table-container {
         display: flex;
