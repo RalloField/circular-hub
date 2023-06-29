@@ -15,7 +15,7 @@ class SessionController extends Controller
 
     public function create()
     {
-        return view('');
+        return view('sessions.login');
     }
 
     public function store(SessionRequest $request)
@@ -27,6 +27,7 @@ class SessionController extends Controller
 
         if (auth()->attempt($attributes)) {
             session()->regenerate();
+            return redirect()->route('projects');
         } else {
             throw ValidationException::withMessages(['email' => 'Email or password are incorrect']);
         }
@@ -36,6 +37,6 @@ class SessionController extends Controller
     {
         Auth::logout();
 
-        return redirect()->route('');
+        return redirect()->route('home');
     }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DefinitionController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -45,3 +46,9 @@ Route::post('/register-company', [CompanyController::class, 'store'])->name('reg
 Route::get('/register', [UserController::class, 'create'])->name('register');
 
 Route::post('/register', [UserController::class, 'store'])->name('create-user');
+
+Route::get('/login', [SessionController::class, 'create'])->name('login-page');
+
+Route::post('/login', [SessionController::class, 'store'])->name('login-user');
+
+Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');

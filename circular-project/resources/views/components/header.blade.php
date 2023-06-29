@@ -7,8 +7,15 @@
             <li><a href="{{ route('companies') }}">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
         </ul>
-        <a href="{{ route('register') }}" class="action_btn">Register</a>
-        <a href="#" class="action_btn">Sign In</a>
+        @if (auth()->check())
+            <!-- Check if the user is logged in -->
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="action_btn">Logout</button> <!-- Logout button -->
+            @else
+                <a href="{{ route('register') }}" class="action_btn">Register</a>
+                <a href="{{ route('login-page') }}" class="action_btn">Sign In</a>
+        @endif
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -17,7 +24,12 @@
             <li><a href="/projects">Projects</a></li>
             <li><a href="{{ route('companies') }}">Companies</a></li>
             <li><a href="CircularForum">Circular Forum</a></li>
-            <li><a href="{{ route('register') }}" class="action_btn">Register</a></li>
-            <li><a href="#" class="action_btn">Sign In</a></li>
+            @if (auth()->check())
+                <!-- Check if the user is logged in -->
+                <li><a href="{{ route('logout') }}" class="action_btn">Logout</a></li> <!-- Logout button -->
+            @else
+                <li><a href="{{ route('register') }}" class="action_btn">Register</a></li>
+                <li><a href="{{ route('login-page') }}" class="action_btn">Sign In</a></li>
+            @endif
         </div>
 </header>

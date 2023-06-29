@@ -337,6 +337,92 @@ scale:0.95;
     .hover:bg-orange-300:hover {
         background-color: #ffe0b2;
     }
+
+    /* Styling for the login form */
+
+    
+  .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: beige;
+    }
+
+    .login-form-container {
+        max-width: 400px;
+        padding: 2rem;
+        background-color: rgb(57, 87, 26);
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: beige;
+    }
+
+    .login-form {
+        margin-bottom: 1rem;
+    }
+
+    .form-email,
+    .form-password {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: beige;
+    }
+
+    .input-email,
+    .input-password
+     {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #cccccc;
+        color: black;
+        border-radius: 0.25rem;
+    }
+
+    .text-red-500 {
+        color: #f44336;
+    }
+
+    .text-xs {
+        font-size: 0.75rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .bg-orange-200 {
+        background-color: #ffcc80;
+    }
+
+    .text-gray-900 {
+        color: #212121;
+    }
+
+    .rounded {
+        border-radius: 0.25rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .p-1 {
+        padding: 0.25rem;
+    }
+
+    .hover:bg-orange-300:hover {
+        background-color: #ffe0b2;
+    }
+
     /* Styling for the company form */
 
   .company-container {
