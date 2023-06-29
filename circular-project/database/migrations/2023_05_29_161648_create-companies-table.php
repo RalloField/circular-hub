@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('country');
             $table->string('type');
+            $table->foreignId('user_id');
             $table->timestamp('company_added_at')->nullable();
             $table->timestamps();
         });

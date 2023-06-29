@@ -6,6 +6,7 @@ use App\Http\Requests\CompanyRequest;
 use Illuminate\Http\Request;
 use App\Models\Company;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\Auth;
 
 class CompanyController extends Controller
 {
@@ -34,6 +35,7 @@ class CompanyController extends Controller
         $company->address = $address;
         $company->country = $country;
         $company->type = $type;
+        $company->user_id = Auth::id();
 
         $company->save();
 

@@ -12,9 +12,10 @@
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
                 <button type="submit" class="action_btn">Logout</button> <!-- Logout button -->
-            @else
-                <a href="{{ route('register') }}" class="action_btn">Register</a>
-                <a href="{{ route('login-page') }}" class="action_btn">Sign In</a>
+            </form>
+        @else
+            <a href="{{ route('register') }}" class="action_btn">Register</a>
+            <a href="{{ route('login-page') }}" class="action_btn">Sign In</a>
         @endif
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>

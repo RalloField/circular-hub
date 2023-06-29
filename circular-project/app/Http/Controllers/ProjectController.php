@@ -6,6 +6,7 @@ use App\Http\Requests\ProjectRequest;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -25,13 +26,14 @@ class ProjectController extends Controller
     public function store(ProjectRequest $request)
     {
         $name = $request->validated()['name'];
-        $company = $request->validated()['company'];
         $description = $request->validated()['short_description'];
 
         $project = new Project;
         $project->name = $name;
-        $project->company = $company;
         $project->short_description = $description;
+
+        $project->user_id = Auth::id();
+        $project->company_id = Auth::user()->company->id;
 
         $project->save();
 

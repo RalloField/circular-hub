@@ -16,13 +16,6 @@
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
 
-                    <label for="company" class="form-company">Company: </label>
-                    <input type="text" id="company" name="company" value="{{ old('company') }}" class="input-company"
-                        required>
-                    @error('company')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-                    @enderror
-
                     <label for="short_description" class="form-short_description">Description: </label>
                     <input type="text" id="short_description" name="short_description"
                         value="{{ old('short_description') }}" class="input-description" required>
