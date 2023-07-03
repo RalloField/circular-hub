@@ -38,9 +38,21 @@ This webapp will allow guests to browse through projects and companies to consul
 
 ## Installing
 
+To run Circular Hub on your own device, PHP as well as MySQL is required.
 
 ### Setup
 
+Please check on the Laravel documentation on how to [install Laravel](https://laravel.com/docs/5.4/installation#installation).
+
+In the terminal:
+- clone the repository with:
+`git clone git@github.com:RalloField/circular-hub.git`
+
+- Open the folder with:
+`cd circular-hub`
+
+- Install Composer globally:
+`composer install`
 
 ### Database Manager
 
@@ -60,7 +72,6 @@ DB_PASSWORD = (your password)
 
 JWT_ACCESS_TOKEN = (your access token)
 ```
-
 ---
 
 **_Muy Importante!_**
@@ -72,21 +83,57 @@ In the project folder, make sure you add a .gitignore file, and add the followin
 
 ---
 
+
+When the project opens in VS Code don't forget to run your migrations using:
+- `php artisan migrate`
+
+Now you can run the local development server and follow the instructions on the page itself:
+- `php artisan serve`
+
+
+
 ## Usage
 
+Going from the Homepage the guest can navigate to all the pages but not effectively post or create anything for the page.
 
+He will need to register himself for that.
 
-<img src="public/images/assets/table.png">
-<img src="public/images/assets/create.png">
+<img src="public/images/assets/register.png">
+
+- The user registers through a form.
+
+<img src="public/images/assets/companyregister.png">
+
+- The logged in user is then redirected to register the company.
+
+These two steps must be completed before the logged in user can add a project.
+
+<img src="public/images/assets/addproject.png">
+
+- The user can now add a project to the table overview of projects.
+
+<img src="public/images/assets/projecttable.png">
+
+- The user is (together with the admin of the page) authenticated to delete their own projects if they want.
+Other users are not.
+
 <img src="public/images/assets/menu.png">
 
 
 
 ## Authentication
 
+After being logged in, users can add projects of their company and interact on the forum with other users.
+They are only authorized to edit/delete their own projects of their company.
+
+Guests are only allowed to 'view' the pages. No interaction is allowed.
+
+Admins are allowed to delete or edit the pages if they desire to do so.
+
 
 ## Error handling
 
+The error handling in the forms are handled in Laravel with Request files in which the limitations or requirements are set for each field.
 
 ## Contact
 Created by [Raoul Vandevelde](https://github.com/RalloField) - feel free to contact me!
