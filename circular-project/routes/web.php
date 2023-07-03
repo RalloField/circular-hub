@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DefinitionController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
 
@@ -52,3 +53,5 @@ Route::get('/login', [SessionController::class, 'create'])->name('login-page');
 Route::post('/login', [SessionController::class, 'store'])->name('login-user');
 
 Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
+
+Route::get('/questions', [QuestionController::class, 'index'])->name('questions');

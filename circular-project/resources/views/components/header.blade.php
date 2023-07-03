@@ -5,7 +5,7 @@
             <li><a href="{{ route('what') }}">What?</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="{{ route('companies') }}">Companies</a></li>
-            <li><a href="CircularForum">Circular Forum</a></li>
+            <li><a href="{{ route('questions') }}">Circular Forum</a></li>
         </ul>
         @if (auth()->check())
             <!-- Check if the user is logged in -->
@@ -24,7 +24,7 @@
             <li><a href="{{ route('what') }}">What?</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="{{ route('companies') }}">Companies</a></li>
-            <li><a href="CircularForum">Circular Forum</a></li>
+            <li><a href="{{ route('questions') }}">Circular Forum</a></li>
             @if (auth()->check())
                 <!-- Check if the user is logged in -->
                 <li><a href="{{ route('logout') }}" class="action_btn">Logout</a></li> <!-- Logout button -->

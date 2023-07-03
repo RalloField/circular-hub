@@ -683,4 +683,47 @@ scale:0.95;
     margin-top: 20px;
     text-align: center;
 }
-    
+
+/* Style for the questions and comments */
+
+.questions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header-table-question,
+.header-table-user,
+.table-questions-question,
+.table-questions-user {
+  padding: 10px;
+  text-align: left;
+}
+
+.header-table-question {
+  width: 70%;
+}
+
+.header-table-user {
+  width: 30%;
+}
+
+.table-questions-question a {
+  display: block;
+  color: blue;
+  text-decoration: underline;
+}
+
+.table-questions-user {
+  font-weight: bold;
+}
+
+/* Additional styles for table responsiveness */
+@media (max-width: 600px) {
+  .header-table-question,
+  .header-table-user,
+  .table-questions-question,
+  .table-questions-user {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
