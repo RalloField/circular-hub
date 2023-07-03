@@ -33,12 +33,14 @@
                                 </td>
                                 <td>
                                     @auth
-                                        <form action="{{ route('delete-project', ['id' => $project->id]) }}" method="POST"
-                                            style="display: inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="delete-btn">Delete</button>
-                                        </form>
+                                        @if ($project->user_id == auth()->user()->id)
+                                            <form action="{{ route('delete-project', ['id' => $project->id]) }}" method="POST"
+                                                style="display: inline;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="delete-btn">Delete</button>
+                                            </form>
+                                        @endif
                                     @endauth
                                     {{-- <a href="{{ route('edit-project', ['id' => $project->id]) }}"
                                         class="bg-white text-gray-900 rounded mt-2 p-1">Edit</a> --}}
