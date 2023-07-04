@@ -23,16 +23,18 @@
             @endif
         </div>
 
-        <div class="comment-form-section text-center">
-            <h2>Add Comment:</h2>
-            <!-- Form for adding a new comment -->
-            <form action="{{ route('storeComment', ['question' => $question->id]) }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <textarea class="form-control" name="body" id="comment" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Comment</button>
-            </form>
-        </div>
+        @auth
+            <div class="comment-form-section text-center">
+                <h2>Add Comment:</h2>
+                <!-- Form for adding a new comment -->
+                <form action="{{ route('storeComment', ['question' => $question->id]) }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <textarea class="form-control" name="body" id="comment" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                </form>
+            </div>
+        @endauth
     </div>
 @endsection
