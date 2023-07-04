@@ -685,7 +685,14 @@ scale:0.95;
 }
 
 /* Style for the questions and comments */
-
+.questions-table-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    color: beige;
+    margin-bottom: 2rem;
+}
 .questions-table {
   width: 100%;
   border-collapse: collapse;
@@ -696,7 +703,7 @@ scale:0.95;
 .table-questions-question,
 .table-questions-user {
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .header-table-question {
@@ -709,7 +716,7 @@ scale:0.95;
 
 .table-questions-question a {
   display: block;
-  color: blue;
+  color: beige;
   text-decoration: underline;
 }
 
@@ -727,3 +734,48 @@ scale:0.95;
     font-size: 12px;
   }
 }
+
+.form-group
+{
+    color: #212121;
+}
+
+.comment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question-section {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.comments-section {
+    margin-bottom: 20px;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin-bottom: 5px;
+}
+
+.comment-author {
+    font-style: italic;
+}
+
+.comment-form-section {
+    margin-bottom: 20px;
+}
+

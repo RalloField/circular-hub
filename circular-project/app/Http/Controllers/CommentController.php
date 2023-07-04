@@ -2,25 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
 use App\Models\Comment;
-use App\Models\User;
-use App\Models\Company;
 use App\Models\Question;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
-    public function store(Request $request, Question $question)
+    public function store(CommentRequest $request, Question $question)
     {
         $validatedData = $request->validate([
-            'comment' => 'required|string',
-            'user_id' => 'required|exists:users,id',
-            'company_id' => 'required|exists:companies,id',
+            'body' => 'required|string|max:255',
         ]);
+        $body = $validatedData['body'];
 
-        $comment = new Comment($validatedData);
-        $question->comments()->save($comment);
+        // Create a new comment
+        $comment = new Comment;
+        $comment->body = $body;
+        $comment->user_id = Auth::id();
+        $comment->question_id = $question->id;
 
-        return redirect()->route('questions.show', ['question' => $question->id]);
+        $comment->save();
+
+
+        // Redirect back to the question's show page
+        return redirect()->route('circularcomments.show', ['question' => $question->id]);
     }
 }

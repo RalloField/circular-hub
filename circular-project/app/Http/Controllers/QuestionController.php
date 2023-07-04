@@ -15,4 +15,12 @@ class QuestionController extends Controller
         $questions = Question::all();
         return view('circularcomments.index', compact('questions'));
     }
+
+    public function show(Question $question)
+    {
+        $question->load('comments.user', 'comments.company');
+        $users = User::all();
+        $companies = Company::all();
+        return view('circularcomments.show', compact('question', 'users', 'companies'));
+    }
 }

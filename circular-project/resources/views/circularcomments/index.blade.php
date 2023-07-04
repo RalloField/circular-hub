@@ -21,7 +21,8 @@
                         @foreach ($questions as $question)
                             <tr>
                                 <td class="table-questions-question">
-                                    <a href="">{{ $question->title }}</a>
+                                    <a
+                                        href="{{ route('circularcomments.show', ['question' => $question->id]) }}">{{ $question->title }}</a>
                                 </td>
                                 <td class="table-questions-user">{{ $question->user->name }}</td>
                             </tr>

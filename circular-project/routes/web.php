@@ -8,6 +8,8 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CommentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +57,7 @@ Route::post('/login', [SessionController::class, 'store'])->name('login-user');
 Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
 
 Route::get('/questions', [QuestionController::class, 'index'])->name('questions');
+
+Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('circularcomments.show');
+
+Route::post('/questions/{question}/store', [CommentController::class, 'store'])->name('storeComment');
